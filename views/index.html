@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Todo List</title>
+	</head>
+	<body>
+
+		<div id="app">
+			<input type="text" v-model="query"><button @click="search">Search</button>
+			<ul>
+				<todo-item
+					v-for="(todo, index) in todos"
+					:key="todo._id"
+					:todo="todo"
+					@remove="removeItem(index)">
+				</todo-item>
+			</ul>
+			<input type="text" v-model="text"><button @click="addItem">Add</button>
+		</div>
+		
+	</body>
+</html>
