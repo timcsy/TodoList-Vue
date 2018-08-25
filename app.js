@@ -16,6 +16,6 @@ app.use(bodyParser())
 
 app.use(router.routes())
 
-app.listen(3000, () => {
-	console.log('Server is running at http://localhost:3000')
+app.listen(50319, () => {
+	console.log('Server is running at http://localhost:50319')
 })
